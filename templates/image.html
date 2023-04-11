@@ -1,0 +1,10 @@
+<%!
+    selected_tab="image"
+%>
+<%inherit file="includes/baseform.html"/>
+<%block name="extra_inputs">
+    <label for="width">Width: </label>
+    <input type="number" name="width" id="width" min="1">
+    <label for="height">Height: </label>
+    <input type="number" name="height" id="height" min="1">
+</%block>

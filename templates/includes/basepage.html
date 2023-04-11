@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%include file="head.html" />
+<body>
+    <center>
+    <div class="slips">
+        <h1>Converter!</h1>
+        <div class="tab-selector-container">
+            <a
+            % if self.module.selected_tab == "image":
+                class="checked"
+            % endif
+            href="${STATIC_PATH}/pages/image.html">Image</a>
+            <a
+            % if self.module.selected_tab == "video":
+                class="checked"
+            % endif
+            href="${STATIC_PATH}/pages/video.html">Video</a>
+            <a
+            % if self.module.selected_tab == "audio":
+                class="checked"
+            % endif
+            
+            href="${STATIC_PATH}/pages/audio.html">Audio</a>
+        </div>
+        <div class="tab">
+            <%block name="page_content"/>
+        </div>
+    </div>
+    </center>
+</body>
+</html>

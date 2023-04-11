@@ -1,0 +1,15 @@
+<%inherit file="basepage.html"/>
+<%block name="page_content">
+<form action="${API_URL_BASE}/process-${TARGET_TYPE}" method="post" enctype="multipart/form-data">
+    <label for="fileobj">File: </label>
+    <input type="file" name="fileobj" id="fileobj">
+    <label for="target_type">Target Type: </label>
+    <select name="target_type" id="target_type">
+        % for key, value in TARGET_TEMPLATES['formats'].items():
+        <option value="${key}">${value.get("format_name")}</option>
+        % endfor
+    </select>
+    <%block name="extra_inputs"/>
+    <input type="submit">
+</form>
+</%block>

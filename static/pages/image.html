@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranformera</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+</head>
+<body>
+    <center>
+    <div class="slips">
+        <h1>Converter!</h1>
+        <div class="tab-selector-container">
+            <a
+                class="checked"
+            href="/static/pages/image.html">Image</a>
+            <a
+            href="/static/pages/video.html">Video</a>
+            <a
+            
+            href="/static/pages/audio.html">Audio</a>
+        </div>
+        <div class="tab">
+            
+<form action="/api/process-image" method="post" enctype="multipart/form-data">
+    <label for="fileobj">File: </label>
+    <input type="file" name="fileobj" id="fileobj">
+    <label for="target_type">Target Type: </label>
+    <select name="target_type" id="target_type">
+        <option value="image/jpeg">JPEG Image</option>
+        <option value="image/vnd.microsoft.icon">Icon</option>
+    </select>
+    
+    <label for="width">Width: </label>
+    <input type="number" name="width" id="width" min="1">
+    <label for="height">Height: </label>
+    <input type="number" name="height" id="height" min="1">
+
+    <input type="submit">
+</form>
+
+        </div>
+    </div>
+    </center>
+</body>
+</html>
